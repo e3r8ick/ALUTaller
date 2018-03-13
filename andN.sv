@@ -14,9 +14,5 @@ module andN
 		
 	endgenerate
 
-<<<<<<< HEAD
 	assign y = x[width-1];
-=======
-	assign y = x[width–1];
->>>>>>> 480cfb1cbb74f7a386c8daf3ca7a6835c468bcff
 endmodule
