@@ -1,4 +1,4 @@
-module srlN
+module sllN
 	#(parameter width =3)
 		(input logic [width-1:0] a,
 		output logic [width-1:0] y);

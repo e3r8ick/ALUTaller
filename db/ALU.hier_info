@@ -1,0 +1,16 @@
+|ALU
+a[0] => ~NO_FANOUT~
+a[1] => ~NO_FANOUT~
+a[2] => ~NO_FANOUT~
+b[0] => ~NO_FANOUT~
+b[1] => ~NO_FANOUT~
+b[2] => ~NO_FANOUT~
+result[0] << <GND>
+result[1] << <GND>
+result[2] << <GND>
+n << <GND>
+z << <GND>
+c << <GND>
+v << <GND>
+
+
