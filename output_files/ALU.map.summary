@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Tue Mar 13 11:09:56 2018
+Analysis & Synthesis Status : Successful - Wed Mar 14 20:30:45 2018
 Quartus Prime Version : 17.1.1 Internal Build 593 12/11/2017 SJ Lite Edition
 Revision Name : ALU
 Top-level Entity Name : ALU
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 13
+Total pins : 18
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

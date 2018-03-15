@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Tue Mar 13 11:09:56 2018
+Wed Mar 14 20:30:45 2018
 Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Lite Edition
 
 
@@ -15,9 +15,11 @@ Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Parameter Settings for User Entity Instance: Top-level Entity: |ALU
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+ 10. Parameter Settings for User Entity Instance: sumadorNbits:sumaN
+ 11. Port Connectivity Checks: "sumadorNbits:sumaN"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -43,14 +45,14 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                           ;
 +---------------------------------+------------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Mar 13 11:09:56 2018                ;
+; Analysis & Synthesis Status     ; Successful - Wed Mar 14 20:30:45 2018                ;
 ; Quartus Prime Version           ; 17.1.1 Internal Build 593 12/11/2017 SJ Lite Edition ;
 ; Revision Name                   ; ALU                                                  ;
 ; Top-level Entity Name           ; ALU                                                  ;
 ; Family                          ; Cyclone V                                            ;
 ; Logic utilization (in ALMs)     ; N/A                                                  ;
 ; Total registers                 ; 0                                                    ;
-; Total pins                      ; 13                                                   ;
+; Total pins                      ; 18                                                   ;
 ; Total virtual pins              ; 0                                                    ;
 ; Total block memory bits         ; 0                                                    ;
 ; Total DSP Blocks                ; 0                                                    ;
@@ -167,13 +169,15 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                       ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
-; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                            ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
+; sumadorNbits.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/sumadorNbits.sv ;         ;
+; sumador1bit.sv                   ; yes             ; User SystemVerilog HDL File  ; D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/sumador1bit.sv  ;         ;
+; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv          ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -192,13 +196,13 @@ refer to the applicable agreement for further details.
 ;                                             ;       ;
 ; Dedicated logic registers                   ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 13    ;
+; I/O pins                                    ; 18    ;
 ;                                             ;       ;
 ; Total DSP Blocks                            ; 0     ;
 ;                                             ;       ;
 ; Maximum fan-out node                        ; a[0]  ;
 ; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 13    ;
+; Total fan-out                               ; 18    ;
 ; Average fan-out                             ; 0.50  ;
 +---------------------------------------------+-------+
 
@@ -208,7 +212,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |ALU                       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 13   ; 0            ; |ALU                ; ALU         ; work         ;
+; |ALU                       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 18   ; 0            ; |ALU                ; ALU         ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -238,6 +242,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sumadorNbits:sumaN ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; N              ; 3     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sumadorNbits:sumaN"                                                                                      ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; Q    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -246,7 +270,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; arriav_lcell_comb     ; 1                           ;
 ;     normal            ; 1                           ;
 ;         0 data inputs ; 1                           ;
-; boundary_port         ; 13                          ;
+; boundary_port         ; 18                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 0.00                        ;
 ; Average LUT depth     ; 0.00                        ;
@@ -268,10 +292,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.1 Internal Build 593 12/11/2017 SJ Lite Edition
-    Info: Processing started: Tue Mar 13 11:09:35 2018
+    Info: Processing started: Wed Mar 14 20:30:24 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file sumadornbits.sv
+    Info (12023): Found entity 1: sumadorNbits File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/sumadorNbits.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sumador1bit.sv
+    Info (12023): Found entity 1: sumador1bit File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/sumador1bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
+    Info (12023): Found entity 1: ALU File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file slln.sv
+    Info (12023): Found entity 1: sllN File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/sllN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file xorn.sv
     Info (12023): Found entity 1: xorN File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/xorN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file orn.sv
@@ -282,40 +314,47 @@ Info (12021): Found 1 design units, including 1 entities, in source file andn.sv
     Info (12023): Found entity 1: andN File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/andN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file srln.sv
     Info (12023): Found entity 1: srlN File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/srlN.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file slln.sv
-    Info (12023): Found entity 1: sllN File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/sllN.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: ALU File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 1
+Warning (12090): Entity "MUX" obtained from "MUX.sv" instead of from Quartus Prime megafunction library File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/MUX.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux.sv
+    Info (12023): Found entity 1: MUX File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/MUX.sv Line: 1
 Info (12127): Elaborating entity "ALU" for the top level hierarchy
-Warning (10034): Output port "result" at ALU.sv(5) has no driver File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 5
-Warning (10034): Output port "n" at ALU.sv(6) has no driver File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 6
-Warning (10034): Output port "z" at ALU.sv(7) has no driver File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 7
-Warning (10034): Output port "c" at ALU.sv(8) has no driver File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 8
-Warning (10034): Output port "v" at ALU.sv(9) has no driver File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 9
+Warning (10034): Output port "result" at ALU.sv(7) has no driver File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 7
+Warning (10034): Output port "n" at ALU.sv(8) has no driver File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 8
+Warning (10034): Output port "z" at ALU.sv(9) has no driver File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 9
+Warning (10034): Output port "c" at ALU.sv(10) has no driver File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 10
+Warning (10034): Output port "v" at ALU.sv(11) has no driver File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 11
+Info (12128): Elaborating entity "sumadorNbits" for hierarchy "sumadorNbits:sumaN" File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 17
+Info (12128): Elaborating entity "sumador1bit" for hierarchy "sumadorNbits:sumaN|sumador1bit:sumador_completo[0].sumai" File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/sumadorNbits.sv Line: 14
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "result[0]" is stuck at GND File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 5
-    Warning (13410): Pin "result[1]" is stuck at GND File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 5
-    Warning (13410): Pin "result[2]" is stuck at GND File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 5
-    Warning (13410): Pin "n" is stuck at GND File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 6
-    Warning (13410): Pin "z" is stuck at GND File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 7
-    Warning (13410): Pin "c" is stuck at GND File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 8
-    Warning (13410): Pin "v" is stuck at GND File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 9
+    Warning (13410): Pin "result[0]" is stuck at GND File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 7
+    Warning (13410): Pin "result[1]" is stuck at GND File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 7
+    Warning (13410): Pin "result[2]" is stuck at GND File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 7
+    Warning (13410): Pin "n" is stuck at GND File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 8
+    Warning (13410): Pin "z" is stuck at GND File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 9
+    Warning (13410): Pin "c" is stuck at GND File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 10
+    Warning (13410): Pin "v" is stuck at GND File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 11
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 6 input pin(s) that do not drive logic
+Warning (21074): Design contains 11 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "a[0]" File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 3
     Warning (15610): No output dependent on input pin "a[1]" File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 3
     Warning (15610): No output dependent on input pin "a[2]" File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 3
     Warning (15610): No output dependent on input pin "b[0]" File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 4
     Warning (15610): No output dependent on input pin "b[1]" File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 4
     Warning (15610): No output dependent on input pin "b[2]" File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 4
-Info (21057): Implemented 13 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
+    Warning (15610): No output dependent on input pin "control[0]" File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 5
+    Warning (15610): No output dependent on input pin "control[1]" File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 5
+    Warning (15610): No output dependent on input pin "control[2]" File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 5
+    Warning (15610): No output dependent on input pin "control[3]" File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 5
+    Warning (15610): No output dependent on input pin "carryin" File: D:/TEC/2018_I/Taller de diseño digital/Laboratorios/Lab 3/src/ALUTaller/ALU.sv Line: 6
+Info (21057): Implemented 18 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
     Info (21059): Implemented 7 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 655 megabytes
-    Info: Processing ended: Tue Mar 13 11:09:56 2018
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 659 megabytes
+    Info: Processing ended: Wed Mar 14 20:30:45 2018
     Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:49
+    Info: Total CPU time (on all processors): 00:00:47
 
 
