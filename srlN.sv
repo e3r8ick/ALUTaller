@@ -5,4 +5,5 @@ module srlN
 		 output logic [width-1:0] y);
 		
 	assign y = a >> b;
+	
 endmodule
