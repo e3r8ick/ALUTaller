@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 module ALU
 			#(parameter width = 3)
 			 (input logic [width-1:0] a,
@@ -133,4 +134,6 @@ endmodule
 						#(width)
 						andgate(a,b,result);
 						
-		endcase*/
+		endcase*/		endcase*/
+=======
+>>>>>>> 866b26d4ddb601bd1214b25ba7ba7aab74bf21e5
